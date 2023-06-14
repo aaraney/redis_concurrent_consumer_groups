@@ -283,7 +283,7 @@ async def main():
         gr.xread_group(
             groupname=groupname,
             consumername=group_names[groupname],
-            streams={stream: "0"},
+            streams={stream: ">"},
             count=1,
             block=1000 * 60 * 60,
             noack=False,
